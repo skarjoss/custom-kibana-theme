@@ -1,13 +1,13 @@
 {
   "id": "customKibanaTheme",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "kibanaVersion": "kibana",
   "owner": {
     "name": "lizozom",
     "githubTeam": ""
   },
   "description": "Customize Kibana Theme",
-  "server": false,
+  "server": true,
   "ui": true,
   "enabledOnAnonymousPages": true,
   "requiredPlugins": [],

@@ -6,7 +6,7 @@
     /*
      * Change the main logo
      */
-    .euiHeaderLogo {
+    .euiHeaderLogo, .chrHeaderLogo {
         svg {
             display: none !important;
         }
@@ -14,7 +14,7 @@
         &:after {
             content: '';
             background-position: center;
-            background-image: url('../assets/whale-tales-logo.png');
+            background-image: var(--ckl-logo-url, url('../assets/whale-tales-logo.png'));
             background-repeat: no-repeat;
             background-size: contain;
             width: 150px;

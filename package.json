@@ -5,6 +5,7 @@
   "scripts": {
     "build": "yarn plugin-helpers build",
     "plugin-helpers": "node ../../scripts/plugin_helpers",
+    "dev": "yarn plugin-helpers dev",
     "kbn": "node ../../scripts/kbn"
   }
 }

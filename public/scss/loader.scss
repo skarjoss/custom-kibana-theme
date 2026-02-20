@@ -14,7 +14,7 @@
         content: '';
         display: flex;
         background-position: center;
-        background-image: url('../assets/whale-tales-logo-no-text.png');
+        background-image: var(--ckl-logo-no-text-url, url('../assets/whale-tales-logo-no-text.png'));
         background-repeat: no-repeat;
         background-size: contain;
         width: 100%;
@@ -26,7 +26,7 @@
 
         &:after {
             @include showNewContent;
-            content: 'Welcome to Whales Tales';
+            content: var(--ckl-welcome-text, 'Welcome to Whales Tales');
             line-height: 40px !important; 
         }
     }

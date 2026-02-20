@@ -9,7 +9,7 @@
      * Change the top nav color only on the home page
      */
     .euiHeader.header__firstBar {
-       background-color: darkblue !important;
-       border-bottom-color: darkblue !important;
+       background-color: var(--ckl-primary-color, darkblue) !important;
+       border-bottom-color: var(--ckl-primary-color, darkblue) !important;
    }
  }

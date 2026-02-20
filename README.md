@@ -11,7 +11,7 @@ A Kibana plugin to customise the Kibana UI, including:
 - Dashboard colors
 - Fonts and font sizes
 
-Tested on Kibana 7.17 and 8.x.
+Tested on Kibana 8.x.
 
 ![image](https://user-images.githubusercontent.com/3016806/193463904-1cf0239e-b2cd-4ad3-a302-b30e0917cf33.png)
 ![image](https://user-images.githubusercontent.com/3016806/193463908-295b8f4f-7329-4de1-ab71-468fbee92195.png)
@@ -21,6 +21,35 @@ Tested on Kibana 7.17 and 8.x.
 
 When Kibana first loads, it shows a Kibana loader for a few seconds. 
 Since it is shown before any css is loaded, it is impossible to change that loader without modifying the source code of the plugin.
+
+## Configure branding
+
+The plugin supports these settings in `kibana.yml`:
+
+```yaml
+customKibanaTheme.brandName: "Whales Tales"
+customKibanaTheme.primaryColor: "darkblue"
+customKibanaTheme.logoNoTextFile: "whale-tales-logo-no-text.png"
+customKibanaTheme.logoFile: "whale-tales-logo.png"
+customKibanaTheme.faviconFile: "whale-tales-logo-icon.ico"
+```
+
+`logoNoTextFile`, `logoFile`, and `faviconFile` must be file names located in `public/assets` of this plugin.
+
+For Docker/Kubernetes style deployments, you can also read them from environment variables:
+
+```yaml
+customKibanaTheme.brandName: ${CUSTOM_KIBANA_THEME_BRAND_NAME:Whales Tales}
+customKibanaTheme.primaryColor: ${CUSTOM_KIBANA_THEME_PRIMARY_COLOR:darkblue}
+customKibanaTheme.logoNoTextFile: ${CUSTOM_KIBANA_THEME_LOGO_NO_TEXT_FILE:whale-tales-logo-no-text.png}
+customKibanaTheme.logoFile: ${CUSTOM_KIBANA_THEME_LOGO_FILE:whale-tales-logo.png}
+customKibanaTheme.faviconFile: ${CUSTOM_KIBANA_THEME_FAVICON_FILE:whale-tales-logo-icon.ico}
+```
+
+The plugin builds UI texts automatically from `brandName`, for example:
+
+- `Welcome to <brandName>`
+- `You have logged out of <brandName>.`
 
 ## Development
 

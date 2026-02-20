@@ -26,7 +26,7 @@
                     content: '';
                     display: flex;
                     background-position: center;
-                    background-image: url('../assets/whale-tales-logo-no-text.png');
+                    background-image: var(--ckl-logo-no-text-url, url('../assets/whale-tales-logo-no-text.png'));
                     background-repeat: no-repeat;
                     background-size: contain;
                     width: 48px;
@@ -39,7 +39,7 @@
         
                 &:after {
                     @include showNewContent;
-                    content: 'Welcome to Whale Tales';
+                    content: var(--ckl-welcome-text, 'Welcome to Whales Tales');
                 }
             }
         
@@ -47,16 +47,16 @@
         
         .loginWelcome__content {
             .euiCallOut {
-                background-color: lightblue;
+                background-color: aliceblue;
             }
         
             .euiCallOut .euiCallOutHeader__title {
                 @include hideOldContent;
                 &:after {
                     @include showNewContent;
-                    color: darkblue !important; 
-                    content: "You have logged out of Whale Tales."
-        
+                    color: var(--ckl-primary-color, darkblue) !important;
+                    content: var(--ckl-logout-text, 'You have logged out of Whales Tales.');
+
                 }
             }
         }

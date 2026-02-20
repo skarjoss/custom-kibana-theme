@@ -12,7 +12,7 @@
             content: '';
             display: flex;
             background-position: center;
-            background-image: url('../assets/whale-tales-logo-no-text.png');
+            background-image: var(--ckl-logo-no-text-url, url('../assets/whale-tales-logo-no-text.png'));
             background-repeat: no-repeat;
             background-size: contain;
             width: 100%;
