@@ -27,11 +27,11 @@ Since it is shown before any css is loaded, it is impossible to change that load
 The plugin supports these settings in `kibana.yml`:
 
 ```yaml
-customKibanaTheme.brandName: "Whales Tales"
-customKibanaTheme.primaryColor: "darkblue"
-customKibanaTheme.logoNoTextFile: "whale-tales-logo-no-text.png"
-customKibanaTheme.logoFile: "whale-tales-logo.png"
-customKibanaTheme.faviconFile: "whale-tales-logo-icon.ico"
+custom_kibana_theme.brandName: "Whales Tales"
+custom_kibana_theme.primaryColor: "darkblue"
+custom_kibana_theme.logoNoTextFile: "whale-tales-logo-no-text.png"
+custom_kibana_theme.logoFile: "whale-tales-logo.png"
+custom_kibana_theme.faviconFile: "whale-tales-logo-icon.ico"
 ```
 
 `logoNoTextFile`, `logoFile`, and `faviconFile` must be file names located in `public/assets` of this plugin.
@@ -39,12 +39,14 @@ customKibanaTheme.faviconFile: "whale-tales-logo-icon.ico"
 For Docker/Kubernetes style deployments, you can also read them from environment variables:
 
 ```yaml
-customKibanaTheme.brandName: ${CUSTOM_KIBANA_THEME_BRAND_NAME:Whales Tales}
-customKibanaTheme.primaryColor: ${CUSTOM_KIBANA_THEME_PRIMARY_COLOR:darkblue}
-customKibanaTheme.logoNoTextFile: ${CUSTOM_KIBANA_THEME_LOGO_NO_TEXT_FILE:whale-tales-logo-no-text.png}
-customKibanaTheme.logoFile: ${CUSTOM_KIBANA_THEME_LOGO_FILE:whale-tales-logo.png}
-customKibanaTheme.faviconFile: ${CUSTOM_KIBANA_THEME_FAVICON_FILE:whale-tales-logo-icon.ico}
+custom_kibana_theme.brandName: ${CUSTOM_KIBANA_THEME_BRAND_NAME:Whales Tales}
+custom_kibana_theme.primaryColor: ${CUSTOM_KIBANA_THEME_PRIMARY_COLOR:darkblue}
+custom_kibana_theme.logoNoTextFile: ${CUSTOM_KIBANA_THEME_LOGO_NO_TEXT_FILE:whale-tales-logo-no-text.png}
+custom_kibana_theme.logoFile: ${CUSTOM_KIBANA_THEME_LOGO_FILE:whale-tales-logo.png}
+custom_kibana_theme.faviconFile: ${CUSTOM_KIBANA_THEME_FAVICON_FILE:whale-tales-logo-icon.ico}
 ```
+
+By default, Kibana derives plugin config keys from the plugin `id` using `snake_case`, so this plugin uses `custom_kibana_theme.*`.
 
 The plugin builds UI texts automatically from `brandName`, for example:
 
