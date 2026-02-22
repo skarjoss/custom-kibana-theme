@@ -7,7 +7,7 @@ import './scss/space_selector.scss';
 import './scss/fonts.scss';
 
 import type { PluginInitializerContext } from '../../../src/core/public';
-import type { PublicConfig } from '../config';
+import type { PublicConfig } from '../common/config';
 import { CustomKibanaThemePlugin } from './plugin';
 
 // This exports static code and TypeScript types,

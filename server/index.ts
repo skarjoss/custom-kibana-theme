@@ -1,6 +1,6 @@
 import type { PluginConfigDescriptor, PluginInitializerContext } from '../../../src/core/server';
-import type { Config } from '../config';
-import { configSchema } from '../config';
+import type { Config } from './config';
+import { configSchema } from './config';
 
 export const config: PluginConfigDescriptor<Config> = {
   exposeToBrowser: {

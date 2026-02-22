@@ -4,7 +4,6 @@
     "outDir": "./target/types"
   },
   "include": [
-    "config.ts",
     "common/**/*.ts",
     "public/**/*.ts",
     "public/**/*.tsx",

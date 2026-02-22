@@ -1,5 +1,5 @@
 import { CoreSetup, CoreStart, Plugin, PluginInitializerContext } from '../../../src/core/public';
-import type { PublicConfig } from '../config';
+import type { PublicConfig } from '../common/config';
 import {
   DEFAULT_BRAND_NAME,
   DEFAULT_FAVICON_FILE,
